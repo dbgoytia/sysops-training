@@ -1,10 +1,10 @@
-## Goal
+## Goal
 
 Goal of this demo is to provide an example on how to create an EventBridge event based
 on EC2 Actions. It is partially created in Terraform, so we can see some of the configurations
 happening live on the AWS Console.
 
-## Objective
+## Objective
 
 1. Launch the terraform code in here.
 
@@ -22,13 +22,13 @@ happening live on the AWS Console.
 5. Stop the instance and verify everything is working.
 
 
-## Cool things I've noted
+## Cool things I've noted
 
 * Apparently EventBridge doesn't handle "reboot" events, not sure why.
 
 
-## Sample email
-
+## Sample email
+ 
 You should get a notification such as the following to confirm you've completed the first lab of sysops training
 
 ```
