@@ -1,7 +1,8 @@
 ## Goal
 
 Goal of this demo is to provide an example on how to create an EventBridge event based
-on EC2 Actions.
+on EC2 Actions. It is partially created in Terraform, so we can see some of the configurations
+happening live on the AWS Console.
 
 ## Objective
 
