@@ -8,6 +8,17 @@ happening live on the AWS Console.
 
 1. Launch the terraform code in here.
 
+    ```
+    # Start Terraform 
+    $ terraform init
+
+    # Create a plan for the lab, validate everything's ok.
+    $ terraform plan -out tfplan 
+    
+    # Launch terraform
+    $ terraform apply tfplan
+    ```
+
 2. Create a Rule on EventBridge:
     * Add an event pattern using the AWS Default Event Bus
     * Use AWS as the service provider
@@ -21,6 +32,16 @@ happening live on the AWS Console.
 
 5. Stop the instance and verify everything is working.
 
+
+## To destroy
+
+1. Destroy the terraform code using
+
+```
+$ terraform plan -out tfplan -destroy
+```
+
+2. Destroy the EventBridge rule you created on the console.
 
 ## Cool things I've noted
 
