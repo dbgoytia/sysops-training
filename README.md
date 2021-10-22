@@ -17,6 +17,6 @@ in the documentations online:
 
 https://www.terraform.io/docs/language/settings/backends/s3.html
 
-## How to use this hands-on labs
+## How to use this hands-on labs
 
 Go to the appropiate directory location (cd into it), and and start the commands listed in each section.
