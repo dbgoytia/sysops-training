@@ -9,3 +9,7 @@ This is not, by any way or means, an implementation of a successfull deployment 
 through Terraform. I'll try to keep everything modularized, but deployment will happen 
 "as-a-whole" instead of the preferred approach which is to have sepparate subgroups for each
 infra resource (for blast-radius reduction, readability, maintainability, etc).
+
+## How to use this hands-on labs
+
+Go to the appropiate directory location (cd into it), and and start the commands listed in each section.
