@@ -22,3 +22,16 @@ happening live on the AWS Console.
 5. Stop the instance and verify everything is working.
 
 
+## Cool things I've noted
+
+* Apparently EventBridge doesn't handle "reboot" events, not sure why.
+
+
+## Sample email
+
+You should get a notification such as the following to confirm you've completed the first lab of sysops training
+
+```
+{"version":"0","id":"710a78e8-1b0d-57ea-d0b8-xxxxxxxx","detail-type":"EC2 Instance State-change Notification","source":"aws.ec2","account":"1234567890123","time":"2021-10-22T21:06:54Z","region":"us-east-1","resources":["arn:aws:ec2:us-east-1:1234567890123:instance/i-xxxxxxxx"],"detail":{"instance-id":"i-xxxxxxxx","state":"stopping"}}
+```
+
