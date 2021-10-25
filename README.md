@@ -20,3 +20,8 @@ https://www.terraform.io/docs/language/settings/backends/s3.html
 ## How to use this hands-on labs
 
 Go to the appropiate directory location (cd into it), and and start the commands listed in each section.
+
+
+## Disclaimer
+
+Beware that using some of this components might incur in some extra costs to your AWS resources.
