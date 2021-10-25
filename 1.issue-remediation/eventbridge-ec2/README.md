@@ -9,12 +9,16 @@ happening live on the AWS Console.
 1. Launch the terraform code in here.
 
     ```
-    # Start Terraform 
+    # Initialize terraform providers
     $ terraform init
+    ```
 
+    ```
     # Create a plan for the lab, validate everything's ok.
     $ terraform plan -out tfplan 
-    
+    ```
+
+    ```
     # Launch terraform
     $ terraform apply tfplan
     ```
@@ -38,7 +42,13 @@ happening live on the AWS Console.
 1. Destroy the terraform code using
 
 ```
+# Review what you're about to destroy
 $ terraform plan -out tfplan -destroy
+```
+
+```
+# Destroy the resources
+$ terraform apply tfplan
 ```
 
 2. Destroy the EventBridge rule you created on the console.
