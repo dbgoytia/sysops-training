@@ -63,6 +63,14 @@ resource "aws_eip" "two" {
 resource "aws_route53_zone" "main" {
   provider = aws.east
   name     = "examplelatencyr.com"
+  vpc {
+    vpc_id = module.vpc.vpc_id 
+    vpc_region = "us-east-1"
+  }
+  vpc {
+    vpc_id = module.vpc_two.vpc_id
+    vpc_region = "us-west-2"
+  }
 }
 
 resource "aws_route53_record" "one" {
@@ -89,4 +97,30 @@ resource "aws_route53_record" "two" {
   latency_routing_policy {
     region = "us-west-2"
   }
+}
+
+# Launch an ec2 instance
+module "ec2_primary" {
+  source = "git@github.com:dbgoytia/ec2-tf-module.git?ref=v0.0.2"
+
+  ami                         = "ami-02e136e904f3da870"
+  instance_type               = "t2.micro"
+  subnet_id                   = module.vpc.private_subnets_ids[0]
+  az                          = "us-east-1a"
+  associate_public_ip_address = true
+  region                      = "us-east-1"
+  name                        = "ec2-east1"
+}
+
+# Launch an ec2 instance
+module "ec2_secondary" {
+  source = "git@github.com:dbgoytia/ec2-tf-module.git?ref=v0.0.2"
+
+  ami                         = "ami-013a129d325529d4d"
+  instance_type               = "t2.micro"
+  subnet_id                   = module.vpc_two.private_subnets_ids[0]
+  az                          = "us-west-2a"
+  associate_public_ip_address = true
+  region                      = "us-west-2"
+  name                        = "ec2-west2"
 }

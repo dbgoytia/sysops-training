@@ -13,7 +13,7 @@ module "vpc" {
 
 # Launch an ec2 instance
 module "ec2" {
-  source = "git@github.com:dbgoytia/ec2-tf-module.git?ref=v0.0.1"
+  source = "git@github.com:dbgoytia/ec2-tf-module.git?ref=v0.0.2"
 
   ami                         = "ami-02e136e904f3da870"
   instance_type               = "t2.micro"

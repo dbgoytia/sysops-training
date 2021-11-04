@@ -1,13 +1,18 @@
 ## Route 53 routing
 
-This lab will demonstrate how you can implement latency based routing in AWS.
+This lab will demonstrate how you can implement latency based routing in AWS. Goal is to understand the key role that DNS resolution plays in maintaining high available, highly scalable architectures in AWS.
 
 We will generate two EIPs (Elastic IP's) in AWS (for durability), one in us-east-1 and one in us-west-2. 
 
-Then, we will generate a zone in AWS linked to our newly created VPC, with one A record pointing in us-east-1 and one record pointing in us-west-2.
+Then, we will generate a zone in AWS linked to our newly created VPCs, with one A record pointing in us-east-1 vpc and one record pointing in us-west-2 vpc.
 
-Again, this lab is intented for you to get a feeling on both the console, and Terraform.
+## Resources covered
+* Route53 latency based routing
+* EC2
+* SSM
+* A bit of basic Linux network troubleshooting
 
+---
 
 ## Tasks
 
@@ -21,15 +26,37 @@ terraform plan -out tfplan
 terraform apply tfplan
 ```
 
-2. Go to the console and launch an EC2 instance in us-east-1
 
-3. Go to the console and launch an EC2 instance in us-west-2
-
-4. Perform nslookups to see that you'll get resolution to the closest endpoint (latency based)
+3. Perform nslookups to see that you'll get resolution to the closest endpoint (latency based)
     * from us-east-1 you'll resolve the eip in us-east-1
     * form us-west-2 you'll resolve the eip in uw-west-2
 
 
-## Things to note
+Example
 
-This is just one of the strategies that we can implement for high availability and resilience. This can of course be integrated with Disaster Recovery strategies, such as **Pilot light**.
+*us-west-2*
+```
+# You'll always get the closest endpoint
+Non-authoritative answer:
+Name:   test.examplelatencyr.com
+Address: 100.21.173.159
+```
+
+*us-east-1*
+```
+# You'll always get the closest endpoint
+Non-authoritative answer:
+Name:   test.examplelatencyr.com
+Address: 44.199.148.62
+```
+
+--- 
+
+## Next steps 
+
+Understand business continuity plans (Disaster recovery), and the major role that something like IAC, Routing, Datastores and DNS resolution play in maintaining a buisness running after something goes wrong.
+
+
+---- 
+
+**ENJOY!**
