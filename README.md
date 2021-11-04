@@ -24,4 +24,6 @@ Go to the appropiate directory location (cd into it), and and start the commands
 
 ## Disclaimer
 
-Beware that using some of this components might incur in some extra costs to your AWS resources.
+Beware that using some of this components might incur in some extra costs to your AWS resources. 
+I'm doing this labs on my own and not at all related to my current employer, and is not meant to replace any formal
+AWS Training, rather complement it.
