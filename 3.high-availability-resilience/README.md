@@ -6,6 +6,10 @@ We will generate two EIPs (Elastic IP's) in AWS (for durability), one in us-east
 
 Then, we will generate a zone in AWS linked to our newly created VPCs, with one A record pointing in us-east-1 vpc and one record pointing in us-west-2 vpc.
 
+## Lab layout
+
+![lab layout](https://github.com/dbgoytia/sysops-training/blob/main/3.high-availability-resilience/lab3.jpg?raw=true)
+
 ## Resources covered
 * Route53 latency based routing
 * EC2
