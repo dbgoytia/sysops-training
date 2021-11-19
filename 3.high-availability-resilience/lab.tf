@@ -64,36 +64,36 @@ resource "aws_route53_zone" "main" {
   provider = aws.east
   name     = "examplelatencyr.com"
   vpc {
-    vpc_id = module.vpc.vpc_id 
+    vpc_id     = module.vpc.vpc_id
     vpc_region = "us-east-1"
   }
   vpc {
-    vpc_id = module.vpc_two.vpc_id
+    vpc_id     = module.vpc_two.vpc_id
     vpc_region = "us-west-2"
   }
 }
 
 resource "aws_route53_record" "one" {
-  provider = aws.east
-  zone_id  = aws_route53_zone.main.zone_id
-  name = "test.examplelatencyr.com"
+  provider       = aws.east
+  zone_id        = aws_route53_zone.main.zone_id
+  name           = "test.examplelatencyr.com"
   set_identifier = "east"
-  type     = "A"
-  ttl      = "300"
-  records  = [aws_eip.one.public_ip]
+  type           = "A"
+  ttl            = "300"
+  records        = [aws_eip.one.public_ip]
   latency_routing_policy {
     region = "us-east-1"
   }
 }
 
 resource "aws_route53_record" "two" {
-  provider = aws.west
-  zone_id  = aws_route53_zone.main.zone_id
-  name = "test.examplelatencyr.com"
+  provider       = aws.west
+  zone_id        = aws_route53_zone.main.zone_id
+  name           = "test.examplelatencyr.com"
   set_identifier = "west"
-  type     = "A"
-  ttl      = "300"
-  records  = [aws_eip.two.public_ip]
+  type           = "A"
+  ttl            = "300"
+  records        = [aws_eip.two.public_ip]
   latency_routing_policy {
     region = "us-west-2"
   }
