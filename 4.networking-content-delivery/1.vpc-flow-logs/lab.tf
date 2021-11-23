@@ -30,7 +30,7 @@ module "vpc" {
 }
 
 #------------------------------------------------------------------------------
-# NGINX configuration
+# Apache HTTPd configuration
 #------------------------------------------------------------------------------
 module "ec2_primary" {
   source = "git@github.com:dbgoytia/ec2-tf-module.git?ref=v0.0.2"
