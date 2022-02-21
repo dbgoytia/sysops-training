@@ -13,7 +13,7 @@ We're going to launch an EC2 instance, generate some activity, and capture the m
 listed above to see the usage.
 
 
-## Final result:
+## Final result:
 
 ![EC2 Dashboard](https://github.com/dbgoytia/sysops-training/blob/main/1.monitoring-logging-and-remediation/2.custom-cloudwatch-dashboard/dashboard.png?raw=true)
 
