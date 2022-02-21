@@ -67,7 +67,7 @@ In there, you will find *messages* and *yum.log* which will save all the output 
 later lab we will further explore CloudWatch Log Insights so we can query this information.
 
 
-## To destroy
+## To destroy
 
 1. Destroy the terraform code using
 
@@ -87,5 +87,6 @@ $ terraform apply tfplan
 * Visualizing data exported from the CloudWatch Agent in a CloudWatch Dashboard reuqires more data than default values,
 so this will highly depend on the outputs provided by your Terraform modules.
 * Data inside the logs can easily be queried using CloudWatch Log Insights.
+* There is always some lag 
 
 
