@@ -1,3 +1,11 @@
+# Deploy the SSM Parameter. Ideally, this could be either in another standalone repository
+# or coming through a pre-build AMI
+resource "aws_ssm_parameter" "cwconfig" {
+  name  = "AmazonCloudWatch-cwconfig"
+  type  = "String"
+  value = file("${path.module}/cwatch_config.json")
+}
+
 # Deploy a test VPC
 module "vpc" {
   source = "git@github.com:dbgoytia/vpc-tf-module.git?ref=v0.0.1"
@@ -20,12 +28,16 @@ module "ec2" {
   az                          = "us-east-1a"
   associate_public_ip_address = true
   region                      = "us-east-1"
-  name                        = "test-ec2"
+  name                        = "securitylab"
 
   cloudwatch_agent_enabled = true
   user_data = <<EOF
 #!/bin/bash
-sudo yum install amazon-cloudwatch-agent
+sudo yum update -y
+sudo yum install amazon-cloudwatch-agent -y
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c ssm:${aws_ssm_parameter.cwconfig.name}
+sudo amazon-linux-extras install epel -y
+sudo yum install stress -y
 EOF
 }
 
@@ -97,6 +109,30 @@ resource "aws_cloudwatch_dashboard" "instance_utilization_metrics" {
         "stat": "Average",
         "region": "us-east-1",
         "title": "EC2 Network Packets Out"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "metrics": [
+          [
+            "CWAgent",
+            "mem_used_percent",
+            "InstanceId",
+            "${module.ec2.instance_id}",
+            "ImageId",
+            "ami-02e136e904f3da870",
+            "InstanceType",
+            "t2.micro"
+          ]
+        ],
+        "period": 300,
+        "region": "us-east-1",
+        "title": "Memory"
       }
     }
   ]
