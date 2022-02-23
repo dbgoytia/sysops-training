@@ -52,7 +52,7 @@ listed above to see the usage.
 
 3. What can you see on the dashboards? What else would you add to these? What would happen if this was part of an ASG?
 
-## To destroy
+## To destroy
 
 1. Destroy the terraform code using
 
