@@ -67,7 +67,7 @@ In there, you will find *messages* and *yum.log* which will save all the output 
 later lab we will further explore CloudWatch Log Insights so we can query this information.
 
 
-## To destroy
+## To destroy
 
 1. Destroy the terraform code using
 
