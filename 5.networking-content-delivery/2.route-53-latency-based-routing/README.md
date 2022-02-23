@@ -8,7 +8,7 @@ Then, we will generate a zone in AWS linked to our newly created VPCs, with one 
 
 ## Lab layout
 
-![lab layout](https://github.com/dbgoytia/sysops-training/blob/main/2.reliability-and-buisness-continuity/1.route-53-latency-based-routing/lab3.jpg?raw=true)
+![lab layout](https://github.com/dbgoytia/sysops-training/blob/948b1af85b429727f3ad8e1f5c331bd0069e2d0d/5.networking-content-delivery/2.route-53-latency-based-routing/lab3.jpg?raw=true)
 
 ## Resources covered
 * Route53 latency based routing
