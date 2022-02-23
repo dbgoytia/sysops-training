@@ -38,3 +38,7 @@ define custom tests for your Images.
 or you can see it inside the EC2 Image Builder Dashboard inside "Images"
 
 ![AMI Image EC2 Image Builder](https://github.com/dbgoytia/sysops-training/blob/cd904848a5c3a0f3e9bfde7158c75633e842b23c/3.deployment-provisioning-automation/2.ec2-image-builder/image_imagebuilder.png?raw=true)
+
+
+5. And the image is now showing as available inside the pipeline
+![Availability status](?raw=true)
