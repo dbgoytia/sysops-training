@@ -5,6 +5,8 @@ service required to pass the AWS Sysops certification. If you like to do labs to
 you've come to the right place. I firmly believe that the only way to master somethign is to do it
 continuously, and continously question what you're learning.
 
+Leave a star if you find this repo good so others can upskill!
+
 ## How to use this hands-on labs
 
 Go to the appropiate directory location (cd into it), and and start the commands listed in each section.
@@ -33,6 +35,10 @@ Go to the appropiate directory location (cd into it), and and start the commands
 * ![VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
 * ![WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
 
+
+## Next steps
+
+With this labs you'll be in great shape to go in and take your AWS SysOps tests (or I'd like to believe so).
 
 ## Quick note about the Terraform implementation
 
