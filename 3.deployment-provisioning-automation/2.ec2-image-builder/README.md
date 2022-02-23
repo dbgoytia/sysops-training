@@ -43,5 +43,24 @@ or you can see it inside the EC2 Image Builder Dashboard inside "Images"
 5. And the image is now showing as available inside the pipeline
 ![Availability status](https://github.com/dbgoytia/sysops-training/blob/33e29341a341071f2c749efaf2a299c5b47e551f/3.deployment-provisioning-automation/2.ec2-image-builder/availability.png?raw=true)
 
+## To destroy
+
+1. Destroy the terraform code using
+
+```
+# Review what you're about to destroy
+$ terraform plan -out tfplan -destroy
+```
+
+```
+# Destroy the resources
+$ terraform apply tfplan
+```
+
+2. De-register the created image under EC2 > AMI's and filter by "owned by me"
+
+
+## Fun !
+
 
 Have fun and hope you enjoyed this lab <3!
