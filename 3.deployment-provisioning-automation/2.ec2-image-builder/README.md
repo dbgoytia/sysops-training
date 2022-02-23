@@ -19,22 +19,22 @@ Image Builder to create Docker Images.
 
 1. You'll see the Image Bulider pipeline in the AWS Console:
 
-![Pipeline](?raw=true)
+![Pipeline](https://github.com/dbgoytia/sysops-training/blob/cd904848a5c3a0f3e9bfde7158c75633e842b23c/3.deployment-provisioning-automation/2.ec2-image-builder/pipeline.png?raw=true)
 
 
 2. Once you trigger the pipeline, you'll see an instance being spin up for building your custom AMI.
 
-![Build Instance](?raw=true)
+![Build Instance](https://github.com/dbgoytia/sysops-training/blob/cd904848a5c3a0f3e9bfde7158c75633e842b23c/3.deployment-provisioning-automation/2.ec2-image-builder/instance.png?raw=true)
 
 3. Once the new image has been built, you'll see a new EC2 used for testing purposes. Remember you can
 define custom tests for your Images.
 
-![Test Instance](?raw=true)
+![Test Instance](https://github.com/dbgoytia/sysops-training/blob/cd904848a5c3a0f3e9bfde7158c75633e842b23c/3.deployment-provisioning-automation/2.ec2-image-builder/testing.png?raw=true)
 
 4. After testing finishes, you'll be able to see your Image under EC2 > AMI, and filter by "Owned by me"
 
-![AMI Owned by me](?raw=true)
+![AMI Owned by me](https://github.com/dbgoytia/sysops-training/blob/cd904848a5c3a0f3e9bfde7158c75633e842b23c/3.deployment-provisioning-automation/2.ec2-image-builder/ec2_ami.png?raw=true)
 
 or you can see it inside the EC2 Image Builder Dashboard inside "Images"
 
-![AMI Image EC2 Image Builder](?raw=true)
+![AMI Image EC2 Image Builder](https://github.com/dbgoytia/sysops-training/blob/cd904848a5c3a0f3e9bfde7158c75633e842b23c/3.deployment-provisioning-automation/2.ec2-image-builder/image_imagebuilder.png?raw=true)
