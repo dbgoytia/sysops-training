@@ -1,7 +1,9 @@
 ## Goal
 
 A collection of labs designed for getting some hands-on experience with the
-service required to pass the AWS Sysops certification.
+service required to pass the AWS Sysops certification. If you like to do labs to learn new things,
+you've come to the right place. I firmly believe that the only way to master somethign is to do it
+continuously, and continously question what you're learning.
 
 ## How to use this hands-on labs
 
