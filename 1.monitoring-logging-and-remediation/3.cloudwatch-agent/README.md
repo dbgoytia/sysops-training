@@ -8,7 +8,7 @@ to our previous dashboard so we can see the difference in detail.
 We're going to generate some interesting logs using the *stress* package provided by the EPEL repository.
 
 
-## Final result
+## Final result
 
 ![EC2 Dashboard](https://github.com/dbgoytia/sysops-training/blob/main/1.monitoring-logging-and-remediation/3.cloudwatch-agent/dashboard.png?raw=true)
 
