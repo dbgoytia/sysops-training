@@ -1,6 +1,8 @@
 # mac
 .DS_Store
 
+notes.txt
+
 # Local .terraform directories
 **/.terraform/*
 
