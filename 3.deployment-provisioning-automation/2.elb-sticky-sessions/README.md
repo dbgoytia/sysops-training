@@ -55,5 +55,6 @@ The contents of the cookies are encrypted using a rotating key. You can’t decr
 
 * For duration-based cookies, cookie names will be named AWSALB and that’s going to  be used across all target groups.
 
+# The labs
 
-
+Inside this section, you'll find two labs, each implementing each of this cookies for you to see and play around on what exactly does it mean for an app to support session based cookies, and how exactly does each one of this behave.
