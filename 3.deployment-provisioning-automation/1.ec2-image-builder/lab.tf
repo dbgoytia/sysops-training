@@ -52,7 +52,7 @@ resource "aws_imagebuilder_image_recipe" "recipe" {
 }
 
 
-# Test infra configuration
+# Test infra configuration
 resource "aws_iam_instance_profile" "test_profile" {
   name = "test_profile"
   role = aws_iam_role.image_builder_lab.name
